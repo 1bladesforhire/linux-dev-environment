@@ -1,7 +1,7 @@
-MDE (mac-dev-env)
+LDE (linux-dev-env)
 ===========
 
-### Update (11.3.14)
+### Initial (12.12.2015)
 
 Self executing script v.1. Please read through script.
 
@@ -10,17 +10,16 @@ Self executing script v.1. Please read through script.
 ---
 
 ### General Notes
-Assumes this is on a fresh install of Yosemite. If you already have an environment setup, dont run the init.sh script, rather comb through this and cherry pick. Hopefully you're not using mamp or the like.
+Assumes this is on a fresh install of Linux Mint. You can set up the parts that you will definitely need and go from there.
 
 All references to `subl` is for opening files within the Sublime Text editor, if you haven't heard of it, no worries, this setup will install it for you and set up an alias to use it with.
 
 Make sure your bash scripts have had `chmod +x` ran on them; e.g. `chmod +x script.sh`, making the file executable by everyone.
 
-Mac Dev Env Setup consists of:
+Linux Dev Env Setup consists of:
 
-	homebrew
+	linuxbrew
 	php 5.6
-	update mac unix tools
 	correct paths
 	git
 	ruby
@@ -34,9 +33,7 @@ Mac Dev Env Setup consists of:
 	grunt
 	gulp
 	cask - pretty much all your apps
-	mackup - keep your app settings in sync. wHAT?! word.
 	SublimeText3 / Chrome extensions
-	iTerm settings
 
 # Run this exactly like this.
 
@@ -53,13 +50,15 @@ Mac Dev Env Setup consists of:
 		* get xcode
 		* install dev tools
 
-## xquartz
+## x11
+	*`$xdpyinfo`
 	$ curl http://xquartz-dl.macosforge.org/SL/XQuartz-2.7.7.dmg -o /tmp/XQuartz.dmg
 	$ open /tmp/XQuartz.dmg
 
-## homebrew
+## linuxbrew
 	$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	$ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
+	$ source ~/.bash_profile
 	$ brew doctor
 	$ brew update
 	$ brew upgrade
